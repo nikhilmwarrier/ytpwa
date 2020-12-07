@@ -2,7 +2,7 @@
   "name": "YouTube",
   "short_name": "YouTube",
   "theme_color": "#ff0000",
-  "background_color": "#606060",
+  "background_color": "#333333",
   "display": "standalone",
   "Scope": "/",
   "start_url": "index.html",

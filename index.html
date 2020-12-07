@@ -2,12 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="theme-color" content="#606060" />
+    <meta name="theme-color" content="#333333" />
     <meta name="shortcut icon" content="./res/icon_512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=http://m.youtube.com" />
+    <!-- <meta http-equiv="refresh" content="5; url=http://m.youtube.com" /> -->
     <link rel="manifest" href="manifest.json" />
     <title>YouTube</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      body {
+        background-color: #333333;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        font-size: 3rem;
+      }
+      .spinner {
+        height: 50px;
+        width: 50px;
+        border: 0px solid white;
+        border-right: 5px solid transparent;
+        border-top: 5px solid red;
+        border-radius: 50%;
+        animation: spin 0.5s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0turn);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      p {
+        text-align: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <p>Taking you to YouTube...</p>
+    <div class="spinner"></div>
+  </body>
 </html>

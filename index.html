@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="theme-color" content="#333333" />
+    <meta name="theme-color" content="#202020" />
     <meta name="shortcut icon" content="./res/icon_512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="5; url=http://m.youtube.com" />
+    <meta http-equiv="refresh" content="3; url=http://m.youtube.com" />
     <link rel="manifest" href="manifest.json" />
     <title>YouTube</title>
     <style>
@@ -13,7 +13,7 @@
         font-family: sans-serif;
       }
       body {
-        background-color: #333333;
+        background-color: #202020;
         color: #fff;
         display: flex;
         align-items: center;
@@ -48,6 +48,21 @@
   </head>
   <body>
     <p>Taking you to YouTube...</p>
+    <p id="counter">1</p>
     <div class="spinner"></div>
+    <script>
+      const counter = document.querySelector("#counter");
+
+      var timeleft = 3;
+      var redirectTimer = setInterval(function () {
+        if (timeleft <= 0) {
+          clearInterval(redirectTimer);
+          counter.innerHTML = "Redirecting...";
+        } else {
+          counter.innerHTML = timeleft;
+        }
+        timeleft -= 1;
+      }, 1000);
+    </script>
   </body>
 </html>
